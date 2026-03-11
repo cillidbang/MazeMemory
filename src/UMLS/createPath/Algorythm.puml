@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:createPath();
+:get randomIndex;
+:set randomStartColumn;
+
+while (currentRow !== 0)
+
+:check surroundings;
+
+  if (überprüfe
+  || oben
+  || rechts
+  || unten
+  || links) -
+  ) then
+  endif
+  :return valid options;
+  :choose random option;
+  :set field;
+endwhile
+
+
+stop
+
+@enduml

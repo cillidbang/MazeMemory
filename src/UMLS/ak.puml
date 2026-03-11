@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+
+
+|View|
+start
+:enter playboard size;
+:enter rows;
+:enter columns;
+:start game;
+
+|InputInterface(js)|
+  :read Input;
+  :create playboard[][];
+  :create fields;
+  :set unique id;
+ :create clickable div;
+  |GameLogic(js)|
+  :generate path();
+  while(!complete)
+
+  :check surrondings;
+  :choose random valid position;
+  :set valid field true;
+
+  endwhile
+  |View|
+  :show fields as grid;
+
+  while (life > 0)
+
+  |InputInterface(js)|
+  :listen to clickEvent at field;
+  |GameLogic(js)|
+  :check Field();
+  if (field === true) is (yes) then
+    :change field color;
+    :add point to score;
+  else (no)
+    :decrease life count;
+  endif
+endwhile
+
+:game end;
+
+stop
+
+@enduml

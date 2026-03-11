@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+
+: field is placeable if;
+:conditions:  \n not set \n : && playboard[row][column] != true \n isInsideArray:\n&& row <= playboard.length - 1 \n&& row >= 0 \n&& column <= playboard.length - 1 \n&& column >= 0;
+
+stop
+
+@enduml

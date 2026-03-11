@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+(set playboard size) as UC1 <<one time >>
+(start game) as UC2 <<one time >>
+(click field) as UC3 <<repeatedly>>
+
+:User: -> UC1
+:User: ---> UC2
+:User: -> UC3
+
+
+
+@enduml
